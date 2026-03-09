@@ -1,0 +1,138 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #FFFDF7;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #0B612D;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F6A619;
+  --secondary-foreground: #1A1A1A;
+  --muted: #F7E196;
+  --muted-foreground: #5C5C5C;
+  --accent: #BC5217;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #E8DFC8;
+  --input: #E8DFC8;
+  --ring: #0B612D;
+  --chart-1: #0B612D;
+  --chart-2: #F6A619;
+  --chart-3: #BC5217;
+  --chart-4: #F9DC45;
+  --chart-5: #F7E196;
+  --radius: 0.5rem;
+  --sand: #F7E196;
+  --light-yellow: #F9DC45;
+  --nomad-yellow: #F6A619;
+  --dark-green: #0B612D;
+  --terracotta: #BC5217;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-serif: 'Playfair Display', 'Georgia', serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sand: var(--sand);
+  --color-light-yellow: var(--light-yellow);
+  --color-nomad-yellow: var(--nomad-yellow);
+  --color-dark-green: var(--dark-green);
+  --color-terracotta: var(--terracotta);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Focus visível para acessibilidade */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+  /* Seleção de texto com cor da marca */
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+/* Topographic pattern */
+.topo-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230B612D' stroke-width='0.5' opacity='0.06'%3E%3Cellipse cx='300' cy='300' rx='280' ry='180'/%3E%3Cellipse cx='300' cy='300' rx='250' ry='155'/%3E%3Cellipse cx='300' cy='300' rx='220' ry='130'/%3E%3Cellipse cx='300' cy='300' rx='190' ry='105'/%3E%3Cellipse cx='300' cy='300' rx='160' ry='80'/%3E%3Cellipse cx='300' cy='300' rx='130' ry='60'/%3E%3Cellipse cx='300' cy='300' rx='100' ry='42'/%3E%3Cellipse cx='300' cy='300' rx='70' ry='26'/%3E%3Cellipse cx='300' cy='300' rx='40' ry='14'/%3E%3Cellipse cx='120' cy='120' rx='100' ry='70'/%3E%3Cellipse cx='120' cy='120' rx='75' ry='50'/%3E%3Cellipse cx='120' cy='120' rx='50' ry='30'/%3E%3Cellipse cx='120' cy='120' rx='25' ry='14'/%3E%3Cellipse cx='480' cy='480' rx='110' ry='75'/%3E%3Cellipse cx='480' cy='480' rx='85' ry='55'/%3E%3Cellipse cx='480' cy='480' rx='60' ry='35'/%3E%3Cellipse cx='480' cy='480' rx='35' ry='18'/%3E%3Cellipse cx='500' cy='100' rx='90' ry='60'/%3E%3Cellipse cx='500' cy='100' rx='65' ry='40'/%3E%3Cellipse cx='500' cy='100' rx='40' ry='22'/%3E%3Cellipse cx='80' cy='500' rx='80' ry='55'/%3E%3Cellipse cx='80' cy='500' rx='55' ry='35'/%3E%3Cellipse cx='80' cy='500' rx='30' ry='16'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 600px 600px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utilitários para conversão e UX */
+.cta-whatsapp {
+  @apply rounded-full font-bold shadow-xl transition-all duration-300 active:scale-[0.98];
+}
+.cta-whatsapp:hover {
+  @apply shadow-2xl scale-[1.03];
+}
+
+/* Animação suave de entrada (para scroll) */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* Card hover premium */
+.card-hover {
+  @apply transition-all duration-300;
+}
+.card-hover:hover {
+  @apply shadow-xl -translate-y-0.5;
+}

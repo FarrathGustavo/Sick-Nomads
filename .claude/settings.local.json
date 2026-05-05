@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"c:/Users/Gutyn/OneDrive/Área de Trabalho/sick_nomads_landing/public/images/experiences\")",
+      "Bash(cp \"C:/Users/Gutyn/OneDrive/Área de Trabalho/visual_sick/china/WhatsApp Image 2026-04-23 at 13.22.57.jpeg\" \"c:/Users/Gutyn/OneDrive/Área de Trabalho/sick_nomads_landing/public/images/experiences/china.jpg\")",
+      "Bash(cp \"C:/Users/Gutyn/OneDrive/Área de Trabalho/visual_sick/costa_rica/WhatsApp Image 2026-04-23 at 12.53.15 \\(1\\).jpeg\" \"c:/Users/Gutyn/OneDrive/Área de Trabalho/sick_nomads_landing/public/images/experiences/costa-rica.jpg\")",
+      "Bash(cp \"C:/Users/Gutyn/OneDrive/Área de Trabalho/visual_sick/noronha/WhatsApp Image 2026-04-23 at 13.03.31 \\(10\\).jpeg\" \"c:/Users/Gutyn/OneDrive/Área de Trabalho/sick_nomads_landing/public/images/experiences/noronha.jpg\")",
+      "Bash(cp \"C:/Users/Gutyn/OneDrive/Área de Trabalho/visual_sick/pico_itaguare/WhatsApp Image 2026-04-23 at 12.57.28 \\(10\\).jpeg\" \"c:/Users/Gutyn/OneDrive/Área de Trabalho/sick_nomads_landing/public/images/experiences/pico-itaguare.jpg\")",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "Bash(npm run *)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(curl http://localhost:3000/)",
+      "Bash(pkill -f \"next\\\\|node\")",
+      "WebFetch(domain:travelshift.com)",
+      "mcp__Claude_Preview__preview_start",
+      "WebSearch",
+      "WebFetch(domain:www.awwwards.com)",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "Bash(xdotool search *)",
+      "Bash(wmctrl -l)",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3003/)",
+      "Bash(npm view *)",
+      "Bash(npm install *)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} - %{size_download} bytes\\\\n\" http://localhost:3004/)",
+      "Bash(xargs grep *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Gutyn\\\\OneDrive\\\\Área de Trabalho\\\\sick_nomads_landing\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "WebFetch(domain:unsplash.com)"
+    ]
+  }
+}
